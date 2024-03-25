@@ -1,11 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = 3001;
-
-
+const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
-
-
 app.get('/', (req, res) => {
   res.send(`
     <html>
@@ -18,7 +14,6 @@ app.get('/', (req, res) => {
     </html>
   `);
 });
-
 app.get('/student', (req, res) => {
   res.send(`
     <html>
@@ -31,8 +26,6 @@ app.get('/student', (req, res) => {
     </html>
   `);
 });
-
-
 app.get('/add-student', (req, res) => {
   res.send(`
     <html>
@@ -45,7 +38,6 @@ app.get('/add-student', (req, res) => {
     </html>
   `);
 });
-
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
